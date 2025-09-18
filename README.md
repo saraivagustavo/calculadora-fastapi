@@ -8,10 +8,10 @@ educacional de explorar e consolidar os conceitos fundamentais do
 FastAPI, tornando-o um excelente recurso para desenvolvedores que estão
 aprendendo o framework.
 
-Através desta calculadora, é possível demonstrar como: \* Definir e
-gerenciar rotas de API. \* Trabalhar com diferentes tipos de parâmetros
-(de caminho, de consulta e corpo da requisição). \* Aproveitar a
-validação automática de dados fornecida pelo Pydantic. \* Utilizar a
+Através desta calculadora, é possível demonstrar como: **Definir e
+gerenciar rotas de API.** Trabalhar com diferentes tipos de parâmetros
+(de caminho, de consulta e corpo da requisição). **Aproveitar a
+validação automática de dados fornecida pelo Pydantic.** Utilizar a
 documentação interativa (Swagger UI/ReDoc) que o FastAPI gera
 automaticamente.
 
