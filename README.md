@@ -24,27 +24,6 @@ A API oferece as quatro operações matemáticas básicas:
 -   **Multiplicação**
 -   **Divisão**
 
-## ✨ Conceitos do FastAPI Abordados
-
-Este repositório é um playground prático para entender os seguintes
-aspectos do FastAPI:
-
--   **Definição de Rotas**: Utilização de decoradores como `@app.get()`
-    e `@app.post()`.
--   **Parâmetros de Caminho (Path Parameters)**: Como extrair valores
-    diretamente da URL (ex: `/subtract/{num1}/{num2}`).
--   **Parâmetros de Consulta (Query Parameters)**: Como receber dados
-    através da string de consulta da URL (ex: `/add?num1=10&num2=5`).
--   **Corpo da Requisição (Request Body)**: Uso de modelos Pydantic para
-    definir a estrutura e validar os dados enviados no corpo de
-    requisições POST.
--   **Validação de Dados**: O poder do Pydantic para garantir que os
-    dados recebidos estejam no formato e tipo corretos.
--   **Documentação Automática**: Exploração das interfaces Swagger UI
-    (`/docs`) e ReDoc (`/redoc`) para testar e entender a API.
--   **Tratamento de Erros**: Como lidar com situações como divisão por
-    zero.
-
 ## 🛠️ Tecnologias Utilizadas
 
 -   **Python 3.x**
@@ -74,7 +53,7 @@ virtual:
 ``` bash
 python -m venv venv
 # Para Windows
-.env\Scriptsctivate
+.venv\Scripts\activate
 # Para macOS/Linux
 source venv/bin/activate
 ```
@@ -110,46 +89,6 @@ documentação interativa para testar os endpoints:
 -   **Swagger UI:** http://127.0.0.1:8000/docs
 -   **ReDoc:** http://127.0.0.1:8000/redoc
 
-### Exemplos de uso:
-
-#### Adição (GET com Query Parameters)
-
--   **Endpoint:** `/add`
--   **Exemplo:** http://127.0.0.1:8000/add?num1=10&num2=5\
--   **Resposta esperada:** `{"resultado": 15}`
-
-#### Subtração (GET com Path Parameters)
-
--   **Endpoint:** `/subtract/{num1}/{num2}`
--   **Exemplo:** http://127.0.0.1:8000/subtract/10/5\
--   **Resposta esperada:** `{"resultado": 5}`
-
-#### Multiplicação (POST com Request Body)
-
--   **Endpoint:** `/multiply`
--   **Método:** POST\
--   **Corpo da Requisição (JSON):**
-
-``` json
-{
-  "num1": 10,
-  "num2": 5
-}
-```
-
--   **Resposta esperada:** `{"resultado": 50}`
-
-#### Divisão (GET com Query Parameters e Tratamento de Erro)
-
--   **Endpoint:** `/divide`
--   **Exemplo:** http://127.0.0.1:8000/divide?num1=10&num2=2\
--   **Resposta esperada:** `{"resultado": 5.0}`
-
-**Exemplo de erro (divisão por zero):**\
-http://127.0.0.1:8000/divide?num1=10&num2=0\
-Resposta de erro esperada:
-`{"detail": "Não é possível dividir por zero."}`
-
 ## 🤝 Contribuição
 
 Contribuições são sempre bem-vindas! Se você tiver sugestões de
@@ -167,4 +106,4 @@ bug, sinta-se à vontade para:
 ## 📄 Licença
 
 Este projeto está licenciado sob a Licença MIT. Para mais detalhes,
-consulte o arquivo LICENSE na raiz do repositório (se disponível).
+consulte o arquivo LICENSE na raiz do repositório.
