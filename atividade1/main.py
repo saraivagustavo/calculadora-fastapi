@@ -21,7 +21,7 @@ async def somar_numeros(requisicao: OperacaoRequest): #os parâmetros da funçã
 #====================================
 
 
-########## SUBTRAÇÃO #########
+########## SUBTRAÇÃO ##############
 @app.post("/subtrair", response_model=OperacaoResponse, summary="Subtração de dois números", response_description="Resultado da subtração", tags=["Operações"])
 async def subtrair_numeros(requisicao: OperacaoRequest): #mesma lógica da soma
     resultado = subtrair(requisicao.a, requisicao.b) #chama a função subtrair que está no services/operations.py
