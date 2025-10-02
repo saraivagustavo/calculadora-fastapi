@@ -13,7 +13,7 @@ async def read_root():
     return {"message": "Bem-vindo à API de Operações Matemáticas!"}
 
 
-######### SOMA #########
+######### SOMA ##############
 @app.post("/somar", response_model=OperacaoResponse, summary="Soma de dois números", response_description="Resultado da soma", tags=["Operações"])
 async def somar_numeros(requisicao: OperacaoRequest): #os parâmetros da função são definidos pelo modelo OperacaoRequest 
     resultado = somar(requisicao.a, requisicao.b) #chama a função somar que está no services/operations.py
