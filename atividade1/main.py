@@ -13,7 +13,7 @@ async def read_root():
     return {"message": "Bem-vindo à API de Operações Matemáticas!"}
 
 
-######### SOMA #########
+######### SOMA ##############-----
 @app.post("/somar", response_model=OperacaoResponse, summary="Soma de dois números", response_description="Resultado da soma", tags=["Operações"])
 async def somar_numeros(requisicao: OperacaoRequest): #os parâmetros da função são definidos pelo modelo OperacaoRequest 
     resultado = somar(requisicao.a, requisicao.b) #chama a função somar que está no services/operations.py
@@ -29,7 +29,7 @@ async def subtrair_numeros(requisicao: OperacaoRequest): #mesma lógica da soma
 #====================================
 
 
-########## MULTIPLICAÇÃO #########
+########## MULTIPLICAÇÃO #############
 @app.post("/multiplicar", response_model=OperacaoResponse, summary="Multiplicação de dois números", response_description="Resultado da multiplicação", tags=["Operações"])
 async def multiplicar_numeros(requisicao: OperacaoRequest): #mesma lógica da soma
     resultado = multiplicar(requisicao.a, requisicao.b) #chama a função multiplicar que está no services/operations.py
@@ -37,7 +37,7 @@ async def multiplicar_numeros(requisicao: OperacaoRequest): #mesma lógica da so
 #====================================
 
 
-########## DIVISÃO #########
+########## DIVISÃO #############
 @app.post("/dividir", response_model=OperacaoResponse, summary="Divisão de dois números", response_description="Resultado da divisão", tags=["Operações"])
 async def dividir_numeros(requisicao: OperacaoRequest): #mesma lógica da soma
     try: #tenta executar o código dentro do bloco try, se der erro, ele pula para o bloco except (msm coisa de poo)
